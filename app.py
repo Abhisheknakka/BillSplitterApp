@@ -1,4 +1,8 @@
-from flask import Flask, request, render_template
+import os
+from flask import Flask, request, render_template, jsonify
+from azure.ai.formrecognizer import DocumentAnalysisClient
+from azure.core.credentials import AzureKeyCredential
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key_here'  # Replace with a secret key
