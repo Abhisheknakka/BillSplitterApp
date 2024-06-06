@@ -3,57 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to the App</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .group-section {
-            margin-top: 50px;
-        }
-    </style>
+    <title>Upload Bill</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to the App</h1>
-
-        <div class="group-section">
-            <h2>Create a Group</h2>
-            <!-- Link to navigate to the "Create Group" section -->
-            <p><a href="#create-group">Create Group</a></p>
-        </div>
-
-        <div class="group-section" id="create-group">
-            <h2>Add Members to the Group</h2>
-            <!-- Form to add members to the group -->
-            <form>
-                <label for="member-name">Member Name:</label>
-                <input type="text" id="member-name" name="member-name" required>
-                <label for="member-mobile">Member Mobile:</label>
-                <input type="tel" id="member-mobile" name="member-mobile" required pattern="[0-9]{10}">
-                <button type="submit">Add Member</button>
-            </form>
-        </div>
-
-        <div class="group-section">
-            <h2>Upload a Bill</h2>
-            <!-- Link to navigate to the "Upload Bill" section -->
-            <p><a href="#upload-bill">Upload Bill</a></p>
-        </div>
-
-        <div class="group-section" id="upload-bill">
-            <h2>Bill Upload Form</h2>
-            <!-- Form to upload bill -->
-            <form method="post" enctype="multipart/form-data">
-                <input type="file" name="bill" accept=".pdf,.jpg,.jpeg,.png" required>
-                <button type="submit">Upload Bill</button>
-            </form>
-        </div>
-    </div>
+    <h1>Upload a Bill</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="bill" accept=".pdf,.jpg,.jpeg,.png" required>
+        <input type="submit" value="Upload">
+    </form>
 </body>
 </html>
