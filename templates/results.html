@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Receipt Data</title>
+  </head>
+  <body>
+    <h2>Extracted Receipt Data</h2>
+    <ul>
+      {% for key, value in receipt_data.items() %}
+        <li><strong>{{ key }}:</strong> {{ value }}</li>
+      {% endfor %}
+    </ul>
+    <a href="{{ url_for('upload') }}">Upload Another</a>
+  </body>
+</html>
